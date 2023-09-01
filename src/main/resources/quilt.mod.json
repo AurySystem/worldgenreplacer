@@ -1,40 +1,40 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "gay.aurum",
+		"id": "noisereplacer",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Perlin noise remover",
+			"description": "Removes perlin and simplex noise, replacing them with raw value gradients, making chunk generation weird.",
 			"contributors": {
-				"Your name here": "Owner"
+				"aurys": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://modrinth.com/mod/deleteperlin",
+				"issues": "https://github.com/AurySystem/worldgenreplacer/issues",
+				"sources": "https://github.com/AurySystem/worldgenreplacer"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/noisereplacer/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "gay.aurum.noisereplacer.NoiseReplacer"
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.17.0-"
+				"versions": {"any":[">=0.19.2"]}
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=4.0.0-"
+				"versions": {"any":[">=4.0.0-beta.29+0.75.1"]}
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.19.2"
+				"versions": {"any":[">=1.19.2"]}
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "noisereplacer.mixins.json"
 }
